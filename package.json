@@ -1,0 +1,58 @@
+{
+  "name": "envs-cli",
+  "version": "1.0.6",
+  "description": "",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "changeset": "changeset",
+    "version": "changeset version && pnpm install"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "bin": {
+    "envs-cli": "./bin/bin"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lauweal/envs-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lauweal/envs-cli/issues"
+  },
+  "homepage": "https://github.com/Lauweal/envs-cli#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.1",
+    "@types/chalk": "^2.2.0",
+    "@types/commander": "^2.12.2",
+    "@types/joi": "^17.2.3",
+    "@types/node": "^20.2.3",
+    "@types/yaml": "^1.9.7",
+    "ali-oss": "^6.17.1",
+    "chalk": "3.0.0",
+    "commander": "^10.0.1",
+    "cos-nodejs-sdk-v5": "^2.12.1",
+    "joi": "^17.9.2",
+    "lodash": "^4.17.21",
+    "typescript": "^5.0.4",
+    "yaml": "^2.2.2"
+  },
+  "peerDependencies": {
+    "ali-oss": "^6.17.1",
+    "chalk": "3.0.0",
+    "commander": "^10.0.1",
+    "cos-nodejs-sdk-v5": "^2.12.1",
+    "joi": "^17.9.2",
+    "lodash": "^4.17.21",
+    "yaml": "^2.2.2"
+  }
+}
