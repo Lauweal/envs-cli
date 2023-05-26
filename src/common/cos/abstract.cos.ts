@@ -178,7 +178,7 @@ export abstract class AbstractCos<C = any> {
       await this.cleanRemoteFiles(remote, deleteFiles);
     }
     const files = await this.uploadFiles(local, remote, localFiles);
-    Logger.wran(`以下文件上传失败:\n${files.join('\n')}`);
+    if (files.length) Logger.wran(`以下文件上传失败:\n${files.join('\n')}`);
     return !files.length;
   }
 
@@ -196,7 +196,7 @@ export abstract class AbstractCos<C = any> {
       this.cleanLocalFiles(local, deleteFiles);
     }
     const files = await this.dowloadFiles(local, remote, remoteFiles);
-    Logger.wran(`以下文件下载失败:\n${files.join('\n')}`);
+    if (files.length) Logger.wran(`以下文件下载失败:\n${files.join('\n')}`);
     return !files.length;
   }
 

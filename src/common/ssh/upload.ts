@@ -53,6 +53,6 @@ export async function uploadFile(
       _paths.push(file);
     }
   }
-  Logger.wran(`以下文件上传失败:\n${_paths.join('\n')}`)
+  if (_paths.length) Logger.wran(`以下文件上传失败:\n${_paths.join('\n')}`)
   return !_paths.length;
 }
