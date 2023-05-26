@@ -22,7 +22,7 @@ const CosSchema = joi.object().keys({
 const schema = joi.object({
     ssh: joi.array().ordered(IpSchema),
     cos: CosSchema,
-    assets: joi.array().ordered(AssetsSchema).required()
+    assets: joi.array().items(AssetsSchema).required()
 })
 
 interface IP {
