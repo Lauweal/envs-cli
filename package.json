@@ -34,15 +34,20 @@
     "@changesets/cli": "^2.26.1",
     "@types/chalk": "^2.2.0",
     "@types/commander": "^2.12.2",
+    "@types/glob": "^8.1.0",
     "@types/joi": "^17.2.3",
+    "@types/lodash": "^4.14.195",
     "@types/node": "^20.2.3",
+    "@types/ssh2-sftp-client": "^9.0.0",
     "@types/yaml": "^1.9.7",
     "ali-oss": "^6.17.1",
     "chalk": "3.0.0",
     "commander": "^10.0.1",
     "cos-nodejs-sdk-v5": "^2.12.1",
+    "glob": "^10.2.6",
     "joi": "^17.9.2",
     "lodash": "^4.17.21",
+    "ssh2-sftp-client": "^9.1.0",
     "typescript": "^5.0.4",
     "yaml": "^2.2.2"
   },
@@ -51,8 +56,10 @@
     "chalk": "3.0.0",
     "commander": "^10.0.1",
     "cos-nodejs-sdk-v5": "^2.12.1",
+    "glob": "^10.2.6",
     "joi": "^17.9.2",
     "lodash": "^4.17.21",
+    "ssh2-sftp-client": "^9.1.0",
     "yaml": "^2.2.2"
   }
 }

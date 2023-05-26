@@ -1,9 +1,13 @@
 ssh:
-  - host: 1.2.3.4
+  - host: 1.13.190.96
     port: 22
+cos:
+  type: tencent
+  region: ap-nanjing
+  bucket: environments-1253579870
 assets:
   - type:
       - ssh
       - cos
-    local: /assd/sd
-    remote: /sas/sd
+    local: src
+    remote: /envs-cli/src/

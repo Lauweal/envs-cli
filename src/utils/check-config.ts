@@ -8,21 +8,27 @@ const IpSchema = joi.object().keys({
 });
 
 const AssetsSchema = joi.object().keys({
-    type: joi.array().items(joi.string().valid('cos', 'ssh')).required(),
+    type: joi.array().items(joi.string().valid('cos', 'ssh').default('ssh')).required(),
     local: joi.string().required(),
     remote: joi.string().required(),
 })
 
 const CosSchema = joi.object().keys({
-    region: joi.string(),
-    bucket: joi.string(),
+    type: joi.string().valid('tencent', 'ali').default('tencent'),
+    region: joi.string().required(),
+    bucket: joi.string().required(),
 })
 
 const schema = joi.object({
-    ssh: joi.array().ordered(IpSchema).required(),
+    ssh: joi.array().ordered(IpSchema),
     cos: CosSchema,
     assets: joi.array().ordered(AssetsSchema).required()
 })
+
+interface IP {
+    host: string;
+    port: string | number;
+}
 
 export function isYaml(file: string) {
     const name = extname(file);
@@ -34,6 +40,6 @@ export function check(config) {
         convert: false
     });
     const message = get(error, 'details.0.message')
-    if(message) throw new Error(message);
+    if (message) throw new Error(message);
     return value;
 }
