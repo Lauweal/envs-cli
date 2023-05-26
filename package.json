@@ -3,7 +3,7 @@
   "version": "1.0.6",
   "description": "",
   "scripts": {
-    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "build": "rm -rf lib && tsc -p tsconfig.json",
     "changeset": "changeset",
     "version": "changeset version && pnpm install"
   },

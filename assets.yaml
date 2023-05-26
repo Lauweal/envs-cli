@@ -1,0 +1,9 @@
+ssh:
+  - host: 1.2.3.4
+    port: 22
+assets:
+  - type:
+      - ssh
+      - cos
+    local: /assd/sd
+    remote: /sas/sd
