@@ -1,6 +1,6 @@
 import * as COS from 'cos-nodejs-sdk-v5';
 import { AbstractCos } from './abstract.cos';
-import { createReadStream } from 'fs';
+import { createReadStream, createWriteStream } from 'fs';
 
 
 export class TencentCos extends AbstractCos<COS> {
@@ -18,12 +18,13 @@ export class TencentCos extends AbstractCos<COS> {
   }
 
   protected getFiles(dir: string): Promise<string[]> {
+    const _dir = dir.startsWith('/') ? dir.split('/').filter(Boolean).join('/') : dir;
     return new Promise<string[]>((resolve) => {
       this.client.getBucket(
         {
           Bucket: this.bucket,
           Region: this.region,
-          Prefix: dir
+          Prefix: _dir
         },
         function (err, data) {
           if (err) {
@@ -76,7 +77,25 @@ export class TencentCos extends AbstractCos<COS> {
   }
 
   protected dowloadRemoteFile(local: string, remote: string): Promise<boolean> {
-    throw new Error('Method not implemented.');
+    return new Promise((resolve, reject) => {
+      this.client.getObject(
+        {
+          Bucket: this.bucket,
+          Region: this.region,
+          Key: remote,
+          Output: createWriteStream(local, {
+            flags: 'w'
+          })
+        },
+        function (err: any, data) {
+          if (err) {
+            return resolve(false)
+          } else {
+            return resolve(true)
+          }
+        }
+      )
+    })
   }
 }
 
