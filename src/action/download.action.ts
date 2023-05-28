@@ -45,7 +45,6 @@ export class DownloadAction extends AbstractAction {
             }
             Logger.error('配置文件不存在');
         } catch (error) {
-            console.log(error);
             Logger.error(error.message);
         }
     }
