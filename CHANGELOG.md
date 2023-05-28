@@ -1,5 +1,11 @@
 # envs-cli
 
+## 1.1.2
+
+### Patch Changes
+
+- e39f64b: 下载问题
+
 ## 1.1.1
 
 ### Patch Changes
