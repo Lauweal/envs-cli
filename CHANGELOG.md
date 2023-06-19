@@ -1,5 +1,11 @@
 # envs-cli
 
+## 1.1.3
+
+### Patch Changes
+
+- c6443c9: bug 修复
+
 ## 1.1.2
 
 ### Patch Changes
