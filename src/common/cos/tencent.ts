@@ -77,7 +77,6 @@ export class TencentCos extends AbstractCos<COS> {
   }
 
   protected dowloadRemoteFile(local: string, remote: string): Promise<boolean> {
-    console.log(remote);
     return new Promise((resolve, reject) => {
       this.client.getObject(
         {
