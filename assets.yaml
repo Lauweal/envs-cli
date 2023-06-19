@@ -8,6 +8,13 @@ cos:
 assets:
   - type:
       - ssh
+    local: ./dist/
+    remote: /www/assets/www.soratani.cn/
+  - type:
       - cos
-    local: src
-    remote: /envs-cli/src/
+    local: ./src/assets/rive/
+    remote: /soratani/h5/rive
+  - type:
+      - cos
+    local: ./envs/
+    remote: /soratani/h5/envs/

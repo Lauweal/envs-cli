@@ -71,7 +71,8 @@ export abstract class AbstractCos<C = any> {
   private async collectRemoteFiles(name: string) {
     const files = new Set<string>();
     await this.walkRemote(name, path => {
-      files.add(path.replace(name, ''));
+      const _name = name.split('/').filter(Boolean).join('/')
+      files.add(path.replace(_name, ''));
     });
     return files;
   }

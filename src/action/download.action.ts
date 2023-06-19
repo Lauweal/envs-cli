@@ -21,14 +21,13 @@ export class DownloadAction extends AbstractAction {
                 const data = readFileSync(config).toString();
                 const yamlData = yaml.parse(data);
                 const value = check(yamlData);
-                const sshData = get(value, 'ssh', []);
                 const cosData = get(value, 'cos');
                 const assets = get(value, 'assets', []);
                 const cosAssets = assets.filter(i => i.type.includes('cos')).map((i) => ({
                     ...i,
                     local: join(process.cwd(), i.local)
                 }));
-                if (!sshData.length && !Object.keys(cosData).length) throw new Error('请输入下载的ssh配置或cos配置');
+                if (!Object.keys(cosData).length) throw new Error('请输入下载的cos配置');
                 if (!assets.length) throw new Error('请输入资源信息');
                 if (cos) {
                     const cos = COS.create(cosData.type == 'tencent' ? CosType.Tencent : CosType.Ali, {
