@@ -1,5 +1,11 @@
 # envs-cli
 
+## 1.1.4
+
+### Patch Changes
+
+- bec3de1: bugfix
+
 ## 1.1.3
 
 ### Patch Changes
