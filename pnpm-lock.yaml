@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 devDependencies:
   '@changesets/cli':
     specifier: ^2.26.1
@@ -39,7 +43,7 @@ devDependencies:
     version: 10.0.1
   cos-nodejs-sdk-v5:
     specifier: ^2.12.1
-    version: 2.12.1
+    version: 2.12.4
   glob:
     specifier: ^10.2.6
     version: 10.2.6
@@ -879,12 +883,12 @@ packages:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: true
 
-  /cos-nodejs-sdk-v5@2.12.1:
-    resolution: {integrity: sha512-eN7rzsN2dvKDhAXmtzAmks/2NGWGp/DW0dKsbu/5XGgSzDE6nc5dX90w1NXnBoJvV19gPPbRKMbq72zNwWhmjg==}
+  /cos-nodejs-sdk-v5@2.12.4:
+    resolution: {integrity: sha512-TFTLCzK3owRezlqRwlub+9U7LHd4me5m4q6HFGLa4ez5huYAH3GDf/LM+2CZDQ/vMVU/oigbumB+OeDTmAhByg==}
     engines: {node: '>= 6'}
     dependencies:
       conf: 9.0.2
-      fast-xml-parser: 4.2.2
+      fast-xml-parser: 4.2.5
       mime-types: 2.1.35
       request: 2.88.2
     dev: true
@@ -1286,8 +1290,8 @@ packages:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
     dev: true
 
-  /fast-xml-parser@4.2.2:
-    resolution: {integrity: sha512-DLzIPtQqmvmdq3VUKR7T6omPK/VCRNqgFlGtbESfyhcH2R4I8EzK1/K6E8PkRCK2EabWrUHK32NjYRbEFnnz0Q==}
+  /fast-xml-parser@4.2.5:
+    resolution: {integrity: sha512-B9/wizE4WngqQftFPmdaMYlXoJlJOYxGQOanC77fq9k8+Z0v5dDSVh+3glErdIROP//s/jgb7ZuxKfB8nVyo0g==}
     hasBin: true
     dependencies:
       strnum: 1.0.5
