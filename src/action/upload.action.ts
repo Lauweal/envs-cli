@@ -20,7 +20,7 @@ export class UploadAction extends AbstractAction {
         const password = options.find((o) => o.name === 'password')?.value as string;
         const accessKeyId = options.find((o) => o.name === 'accessKeyId')?.value as string;
         const accessKeySecret = options.find((o) => o.name === 'accessKeySecret')?.value as string;
-
+        Logger.info(JSON.stringify([accessKeyId, accessKeySecret, username, password]));
         try {
             if (existsSync(config)) {
                 if (!isYaml(config)) throw new Error('非yaml配置文件');

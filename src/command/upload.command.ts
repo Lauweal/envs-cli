@@ -3,7 +3,6 @@ import { get } from 'lodash';
 import { AbstractCommand } from "./abstract.command";
 import { Input } from "./command.input";
 import path = require("path");
-import { Logger } from "../ui/logger";
 
 export class UploadCommand extends AbstractCommand {
     public load(program: Command): void {
@@ -54,7 +53,6 @@ export class UploadCommand extends AbstractCommand {
                     name: 'accessKeySecret',
                     value: accessKeySecret
                 })
-                Logger.info(JSON.stringify(options));
                 await this.action.handle(inputs, options);
             })
     }
