@@ -41,7 +41,7 @@ export class UploadAction extends AbstractAction {
                 }));
                 if (!sshData.length && !Object.keys(cosData).length) throw new Error('请输入上传的ssh配置或cos配置');
                 if (!assets.length) throw new Error('请输入资源信息');
-                if (isAll) {
+                if (isAll && [username,password].every(i => !!i) && [accessKeyId, accessKeySecret].every(i => !!i)) {
                     const sshOptions = sshData.map(s => ({
                         ...s,
                         port: Number(s.port),
@@ -59,7 +59,7 @@ export class UploadAction extends AbstractAction {
                     if ([cosStatus, sshStatus].includes(false)) throw new Error('文件更新失败');
                     return;
                 }
-                if (ssh) {
+                if (ssh && [username,password].every(i => !!i)) {
                     const sshOptions = sshData.map(s => ({
                         ...s,
                         port: Number(s.port),
@@ -70,7 +70,7 @@ export class UploadAction extends AbstractAction {
                     if ([sshStatus].includes(false)) throw new Error('文件更新失败');
                     return;
                 }
-                if (cos) {
+                if (cos && [accessKeyId, accessKeySecret].every(i => !!i)) {
                     const cos = COS.create(cosData.type == 'tencent' ? CosType.Tencent : CosType.Ali, {
                         id: accessKeyId,
                         key: accessKeySecret,
