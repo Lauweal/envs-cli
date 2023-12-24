@@ -139,9 +139,9 @@ export abstract class AbstractCos<C = any> {
       index++
       percent = parseInt(((index / size) * 100) as any)
       if (status) {
-        Logger.info(`[${index}/${size}, ${percent}%] upload remote: ${localFile}`)
+        Logger.info(`[${index}/${size}, ${percent}%] upload remote: ${remoteFile}`)
       } else {
-        Logger.wran(`[${index}/${size}, ${percent}%] upload remote: ${localFile}`)
+        Logger.wran(`[${index}/${size}, ${percent}%] upload remote: ${remoteFile}`)
         paths.push(file);
       }
     }
@@ -169,16 +169,25 @@ export abstract class AbstractCos<C = any> {
     return paths;
   }
 
+  private path(local: string) {
+    const _paths = local.split('/').filter(Boolean);
+    if (this.isFile(local)) {
+      return local.replace(_paths[_paths.length - 1], '');
+    }
+    return local;
+  }
 
   public async upload(local: string, remote: string) {
     Logger.info(`[COS] 开始上传${local} -> ${remote}`)
+    const localPath = this.path(local);
+    const remotePath = this.path(remote);
     const localFiles = await this.collectLocalFiles(local);
     const remoteFiles = await this.collectRemoteFiles(remote);
     const deleteFiles = this.findDeletedFiles(localFiles, remoteFiles);
     if (deleteFiles.size > 0) {
-      await this.cleanRemoteFiles(remote, deleteFiles);
+      await this.cleanRemoteFiles(remotePath, deleteFiles);
     }
-    const files = await this.uploadFiles(local, remote, localFiles);
+    const files = await this.uploadFiles(localPath, remotePath, localFiles);
     if (files.length) Logger.wran(`以下文件上传失败:\n${files.join('\n')}`);
     return !files.length;
   }

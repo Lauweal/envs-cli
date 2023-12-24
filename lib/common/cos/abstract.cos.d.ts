@@ -23,6 +23,7 @@ export declare abstract class AbstractCos<C = any> {
     private cleanLocalFiles;
     private uploadFiles;
     private dowloadFiles;
+    private path;
     upload(local: string, remote: string): Promise<boolean>;
     uploads(assets: {
         local: string;
