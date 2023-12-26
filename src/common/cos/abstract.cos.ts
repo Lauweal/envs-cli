@@ -135,6 +135,7 @@ export abstract class AbstractCos<C = any> {
     for (const file of files) {
       const localFile = join(local, file);
       const remoteFile = join(remote, file);
+      Logger.info(`[准备上传] ${localFile}`);
       const status = await this.uploadRemoteFile(localFile, remoteFile);
       index++
       percent = parseInt(((index / size) * 100) as any)
