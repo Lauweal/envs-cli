@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 devDependencies:
   '@changesets/cli':
     specifier: ^2.26.1
@@ -24,7 +28,7 @@ devDependencies:
     version: 20.5.3
   '@types/ssh2-sftp-client':
     specifier: ^9.0.0
-    version: 9.0.0
+    version: 9.0.3
   '@types/yaml':
     specifier: ^1.9.7
     version: 1.9.7
@@ -428,8 +432,8 @@ packages:
     resolution: {integrity: sha512-G8hZ6XJiHnuhQKR7ZmysCeJWE08o8T0AXtk5darsCaTVsYZhhgUrq53jizaR2FvsoeCwJhlmwTjkXBY5Pn/ZHw==}
     dev: true
 
-  /@types/ssh2-sftp-client@9.0.0:
-    resolution: {integrity: sha512-TLrSS/GoU9UwGx9WqTPY/1zQL0TITLw+lmjcT+xGHGjozT+dS/ptwhh/FF1+rY0XJ2P715WDkL/e8yEOnoCR/g==}
+  /@types/ssh2-sftp-client@9.0.3:
+    resolution: {integrity: sha512-pkCiS/NYvfc8S6xq3TvHAIPhQvBcl9Z1kMFxS8yNsqxmg/8ozzglnT4TrfpYBR1hlBky3r+fYntdZ5WnvvlKoQ==}
     dependencies:
       '@types/ssh2': 1.11.11
     dev: true
