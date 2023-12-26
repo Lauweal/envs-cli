@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 devDependencies:
   '@changesets/cli':
     specifier: ^2.26.1
@@ -39,7 +43,7 @@ devDependencies:
     version: 10.0.1
   cos-nodejs-sdk-v5:
     specifier: ^2.12.1
-    version: 2.12.4
+    version: 2.12.6
   glob:
     specifier: ^10.2.6
     version: 10.3.2
@@ -845,7 +849,7 @@ packages:
       make-dir: 3.1.0
       onetime: 5.1.2
       pkg-up: 3.1.0
-      semver: 7.5.1
+      semver: 7.5.3
     dev: true
 
   /content-type@1.0.5:
@@ -865,8 +869,8 @@ packages:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: true
 
-  /cos-nodejs-sdk-v5@2.12.4:
-    resolution: {integrity: sha512-TFTLCzK3owRezlqRwlub+9U7LHd4me5m4q6HFGLa4ez5huYAH3GDf/LM+2CZDQ/vMVU/oigbumB+OeDTmAhByg==}
+  /cos-nodejs-sdk-v5@2.12.6:
+    resolution: {integrity: sha512-Vdnz0s/ATvRp9++YpzER49WWLUtuyVLAjPncGobBK645+tb1pcOCrmJPf2GJSQE+xLkXU3QFN/+LNP6Tm3cXLA==}
     engines: {node: '>= 6'}
     dependencies:
       conf: 9.0.2
@@ -2710,14 +2714,6 @@ packages:
   /semver@6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
     hasBin: true
-    dev: true
-
-  /semver@7.5.1:
-    resolution: {integrity: sha512-Wvss5ivl8TMRZXXESstBA4uR5iXgEN/VC5/sOcuXdVLzcdkz4HWetIoRfG5gb5X+ij/G9rw9YoGn3QoQ8OCSpw==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
     dev: true
 
   /semver@7.5.3:
