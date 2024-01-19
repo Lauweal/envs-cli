@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 devDependencies:
   '@changesets/cli':
     specifier: ^2.26.1
@@ -50,8 +54,8 @@ devDependencies:
     specifier: ^4.17.21
     version: 4.17.21
   ssh2-sftp-client:
-    specifier: ^9.1.0
-    version: 9.1.0
+    specifier: ^10.0.0
+    version: 10.0.0
   typescript:
     specifier: ^5.0.4
     version: 5.1.6
@@ -875,13 +879,13 @@ packages:
       request: 2.88.2
     dev: true
 
-  /cpu-features@0.0.7:
-    resolution: {integrity: sha512-fjzFmsUKKCrC9GrM1eQTvQx18e+kjXFzjRLvJPNEDjk31+bJ6ZiV6uchv/hzbzXVIgbWdrEyyX1IFKwse65+8w==}
+  /cpu-features@0.0.9:
+    resolution: {integrity: sha512-AKjgn2rP2yJyfbepsmLfiYcmtNn/2eUvocUyM/09yB0YDiz39HteK/5/T4Onf0pmdYDMgkBoGvRLvEguzyL7wQ==}
     engines: {node: '>=10.0.0'}
     requiresBuild: true
     dependencies:
       buildcheck: 0.0.6
-      nan: 2.17.0
+      nan: 2.18.0
     dev: true
     optional: true
 
@@ -2160,8 +2164,8 @@ packages:
       thenify-all: 1.6.0
     dev: true
 
-  /nan@2.17.0:
-    resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==}
+  /nan@2.18.0:
+    resolution: {integrity: sha512-W7tfG7vMOGtD30sHoZSSc/JVYiyDPEyQVso/Zz+/uQd0B0L46gtC+pHha5FFMRpil6fm/AoEcRWyOVi4+E/f8w==}
     requiresBuild: true
     dev: true
     optional: true
@@ -2859,25 +2863,25 @@ packages:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: true
 
-  /ssh2-sftp-client@9.1.0:
-    resolution: {integrity: sha512-Hzdr9OE6GxZjcmyM9tgBSIFVyrHAp9c6U2Y4yBkmYOHoQvZ7pIm27dmltvcmRfxcWiIcg8HBvG5iAikDf+ZuzQ==}
-    engines: {node: '>=10.24.1'}
+  /ssh2-sftp-client@10.0.0:
+    resolution: {integrity: sha512-afs3H6xxSpAqWcJug+NdmQ8QM7faBhCZT/hnQhNQkmvTFhMZARl4HTNkIf0/JkjhlbFCnlyDIqcgaSoIQu/9XA==}
+    engines: {node: '>=16.20.2'}
     dependencies:
       concat-stream: 2.0.0
       promise-retry: 2.0.1
-      ssh2: 1.13.0
+      ssh2: 1.15.0
     dev: true
 
-  /ssh2@1.13.0:
-    resolution: {integrity: sha512-CIZBFRRY1y9mAZSqBGFE4EB4dNJad2ysT2PqO8OpkiI3UTB/gUZwE5EaN16qVyQ6s/M7EgC/iaV/MnjdlvnuzA==}
+  /ssh2@1.15.0:
+    resolution: {integrity: sha512-C0PHgX4h6lBxYx7hcXwu3QWdh4tg6tZZsTfXcdvc5caW/EMxaB4H9dWsl7qk+F7LAW762hp8VbXOX7x4xUYvEw==}
     engines: {node: '>=10.16.0'}
     requiresBuild: true
     dependencies:
       asn1: 0.2.6
       bcrypt-pbkdf: 1.0.2
     optionalDependencies:
-      cpu-features: 0.0.7
-      nan: 2.17.0
+      cpu-features: 0.0.9
+      nan: 2.18.0
     dev: true
 
   /sshpk@1.17.0:
